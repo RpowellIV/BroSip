@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# SOLO PROJECT
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# BROS SIP...A MOVIE REVIEW BLOG
+
 
 In the project directory, you can run:
 
