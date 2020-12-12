@@ -27,7 +27,7 @@ main {
   flex: 1;
   justify-content: center;
   width: 100%;
-  background: rgb(110, 134, 180);
+  background:rgb(59, 54, 54);
 }
 
 
@@ -37,6 +37,14 @@ footer {
   padding: 30px 0;
   display: flex;
   justify-content: center;
+}
+
+a:link {
+  color: azure;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .y-app {
@@ -95,4 +103,12 @@ footer {
 
 .mainPic img {
   margin-left: 200px;
+}
+
+.dropStuff a:link {
+  color: blue
+}
+
+.jumbotron {
+  background: rgb(59, 54, 54) ;
 }

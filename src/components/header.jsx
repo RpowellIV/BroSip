@@ -1,25 +1,25 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom'
-import {Navbar, Nav, Form} from 'react-bootstrap'
-import MainDrop from './mainDrop'
+import { Link } from 'react-router-dom'
+import {Navbar, Nav} from 'react-bootstrap'
+import MovieDrop from './movieDrop'
+import MusicDrop from './musicDrop'
 
 const Header = props => {
 
     return(
             <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">BROS SIP</Navbar.Brand>
+            <Navbar.Brand href="/">BROS SIP</Navbar.Brand>
             <Nav className="mainHead">
             <div className='navs'>
-                <Link exact path to='/'>Home</Link>
-                <Link exact path to='/Movies'>Movies</Link>
-                <Link exact path to='/Music'>Music</Link>
+                <Link exact path to='/Movies'><MovieDrop/></Link>
+                <Link exact path to='/Music'><MusicDrop/></Link>
                 <Link to='/Upcoming'>Upcoming</Link>
                 <Link to='/Requests'>Requests</Link>
-                <Link to='/Test'><MainDrop/></Link>
             </div>
             </Nav>
             </Navbar>
     )
 }
+
 
 export default Header;

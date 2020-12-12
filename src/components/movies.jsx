@@ -12,11 +12,11 @@ const Movies = props => {
                             width={64}
                             height={64}
                             className="mr-3"
-                            src="holder.js/64x64"
-                            alt="Generic placeholder"
+                            src="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"
+                            alt="Demon Knight"
                         />
                         <Media.Body>
-                                <h5>Media Heading</h5>
+                                <h5>DEMON KNIGHT</h5>
                                 <p>
                                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
                                 ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
@@ -26,7 +26,24 @@ const Movies = props => {
                         </Media.Body>
                     </Media>
                 </Col>
-                <Col>2 of 2</Col>
+                <Col><Media>
+                        <img
+                            width={64}
+                            height={64}
+                            className="mr-3"
+                            src="https://gonewiththetwins.com/new/wp-content/uploads/2018/12/demonknight.jpg"
+                            alt="Demon Knight"
+                        />
+                        <Media.Body>
+                                <h5>DEMON KNIGHT</h5>
+                                <p>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+                                tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                Donec lacinia congue felis in faucibus.
+                                </p>
+                        </Media.Body>
+                    </Media></Col>
             </Row>
             <Row>
                 <Col>1 of 3</Col>

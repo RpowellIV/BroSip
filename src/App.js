@@ -1,5 +1,5 @@
 import { Link, Route, Switch } from 'react-router-dom'
-import { MainPage, Upcoming, Requests, Header, Movies } from './components'
+import { MainPage, Upcoming, Requests, Header, Movies, DKnight, Music } from './components'
 
 
 const App = () => {
@@ -14,7 +14,9 @@ const App = () => {
             <Route exact path='/' component={MainPage} />
             <Route path='/Upcoming' component={Upcoming} />
             <Route path='/Requests' component={Requests} />
-            <Route path='/Movies' component={Movies} />
+            <Route exact path='/Movies' component={Movies} />
+            <Route path='/Movies/DKnight' component={DKnight} />
+            <Route exact path='/Music' component={Music} />
             </Switch>
         </main>
 
