@@ -6,11 +6,9 @@ import Bros from "../media/BSATS.png"
 const MainPage = props => {
         return (
             <div className="mainPic" >
-                Main page
-                <p>
-                    <img src={Bros} width='50%' alt="test"/>
-                </p>
-        </div>
+                Main page,<br/>
+                <img src={Bros} width='25%' alt="test"/>
+            </div>
     );
 
 }

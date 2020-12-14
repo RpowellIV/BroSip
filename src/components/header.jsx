@@ -8,7 +8,7 @@ const Header = props => {
 
     return(
             <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="/">BROS SIP</Navbar.Brand>
+            <Navbar.Brand href="/">BROS SIP...</Navbar.Brand>
             <Nav className="mainHead">
             <div className='navs'>
                 <Link exact path to='/Movies'><MovieDrop/></Link>

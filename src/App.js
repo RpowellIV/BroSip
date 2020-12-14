@@ -15,7 +15,7 @@ const App = () => {
             <Route path='/Upcoming' component={Upcoming} />
             <Route path='/Requests' component={Requests} />
             <Route exact path='/Movies' component={Movies} />
-            <Route path='/Movies/DKnight' component={DKnight} />
+            <Route path='/Movies/Demon+Knight' component={DKnight} />
             <Route exact path='/Music' component={Music} />
             </Switch>
         </main>

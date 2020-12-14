@@ -11,7 +11,7 @@ const MovieDrop = props => {
         <Dropdown.Toggle split variant="Secondary" id="dropdown-split-basic" />
 
         <Dropdown.Menu>
-            <Dropdown.Item><Link to='/Movies/DKnight'>DEMON KNIGHT</Link></Dropdown.Item>
+            <Dropdown.Item><Link to='/Movies/Demon+Knight'>DEMON KNIGHT</Link></Dropdown.Item>
             <Dropdown.Item>Another action</Dropdown.Item>
             <Dropdown.Item>Something else</Dropdown.Item>
         </Dropdown.Menu>
