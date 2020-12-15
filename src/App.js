@@ -1,5 +1,7 @@
 import { Link, Route, Switch } from 'react-router-dom'
-import { MainPage, Upcoming, Requests, Header, Movies } from './components'
+import { MainPage, Upcoming, Requests, Header, Movies, DKnight, Music, FeedbackForm, Babadook, ThirtySix } from './components'
+
+
 
 
 const App = () => {
@@ -14,7 +16,12 @@ const App = () => {
             <Route exact path='/' component={MainPage} />
             <Route path='/Upcoming' component={Upcoming} />
             <Route path='/Requests' component={Requests} />
-            <Route path='/Movies' component={Movies} />
+            <Route exact path='/Movies' component={Movies} />
+            <Route path='/Movies/Demon+Knight' component={DKnight} />
+            <Route path='/Movies/Babadook' component={Babadook} />
+            <Route path='/Movies/The+36th+Chamber' component={ThirtySix} />
+            <Route exact path='/Music' component={Music} />
+            <Route path='/FormTest' component={FeedbackForm} />
             </Switch>
         </main>
 
@@ -25,4 +32,6 @@ const App = () => {
     );
     }
 
+
+      
 export default App;
