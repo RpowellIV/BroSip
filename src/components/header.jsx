@@ -15,6 +15,7 @@ const Header = props => {
                 <Link exact path to='/Music'><MusicDrop/></Link>
                 <Link to='/Upcoming'>Upcoming</Link>
                 <Link to='/Requests'>Requests</Link>
+                <Link to='/FormTest'>TEST LINK</Link>
             </div>
             </Nav>
             </Navbar>

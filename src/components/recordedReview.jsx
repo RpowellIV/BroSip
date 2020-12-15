@@ -1,12 +1,12 @@
 import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
-import { Card, Button }from 'react-bootstrap'
+import { Card, Button, Media }from 'react-bootstrap'
 import imdb from '../api/imdb'
 
 
-function RecReview(props) {
+function RecordedReview(props) {
 
-    const [recReview, setRecReview] = useState('UPCOMING REVIEW')
+    const [recReview, setRecReview] = useState('REVIEW')
     const [movieRelease, setMovieRelease] = useState('RELEASED')
     const [moivePlot, setMoviePlot] = useState('PLOT HERE')
 
@@ -30,18 +30,18 @@ function RecReview(props) {
         return (
             <div className="mainPic infoText" >
                 <div className='apiInfo'>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={props.poster} />
-                    <Card.Body>
-                        <Card.Title>{recReview}</Card.Title>
-                        <Card.Text>{moivePlot}</Card.Text>
-                        <Card.Text>RELEASED: {movieRelease}</Card.Text>
-                        <Button variant="primary">See more</Button>
-                    </Card.Body>
-                </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={props.poster} />
+                        <Card.Body>
+                            <Card.Title>{recReview}</Card.Title>
+                            <Card.Text>{moivePlot}</Card.Text>
+                            <Card.Text>RELEASED: {movieRelease}</Card.Text>
+                            <Button variant="Secondary"><Link to={props.linkTo}>WATCH REVIEW</Link></Button>
+                        </Card.Body>
+                    </Card>
                 </div>
             </div>
         )
     }  
 
-export default RecReview;
+export default RecordedReview;

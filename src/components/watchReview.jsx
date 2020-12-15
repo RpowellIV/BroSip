@@ -1,12 +1,11 @@
 import {React, useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom'
-import { Container, Jumbotron, Row, Col, Media }from 'react-bootstrap'
+import { Container, Jumbotron }from 'react-bootstrap'
 import imdb from '../api/imdb'
 
 
-function DKnight(props) {
+function WatchReview(props) {
 
-    const [currentMovie, setCurrentMovie] = useState('CURRENT MOVIE')
+    const [currentMovie, setCurrentMovie] = useState('WATCH THE REVIEW')
     const [movieRelease, setMovieRelease] = useState('RELEASED')
     const [moivePlot, setMoviePlot] = useState('PLOT HERE')
 
@@ -38,14 +37,12 @@ function DKnight(props) {
                     <Container>
                         <h1>BROS SIP AND TALK S#@% about...</h1>
                             <h2>{currentMovie}</h2>
-                    <iframe width="590" height="332" src="https://www.youtube.com/embed/Keow0Vackx0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p>
-                        Welcome to Brothers Sip and Talk S#@%, where we discuss all things horror and foreign...films. Over our next drink, we discuss cult classic "Tales From The Crypt: DEMON KNIGHT"...Shout out to Jada for being a beast in this Black directed horror flop turned hit....and Billy Zane...did his thing!
-                        </p>
+                    <iframe width="590" height="332" src={props.tube} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>{props.blerb}</p>
                     </Container>
                 </Jumbotron>
             </div>
         )
     }  
 
-export default DKnight;
+export default WatchReview;

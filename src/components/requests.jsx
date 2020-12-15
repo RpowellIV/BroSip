@@ -12,7 +12,7 @@ const Requests = props => {
     const handleChange = e => {
         if (e.target.name === 'email') setEmail(e.target.value);
         if (e.target.name === 'request') setRequest(e.target.value);
-      }
+    }
 
     const handleSubmit = () => {
         props.newRequest(email, request);

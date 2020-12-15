@@ -144,3 +144,11 @@ a:visited {
   width: 80%;
 
 }
+
+.movieCard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center ;
+  align-items: stretch;
+  
+}
