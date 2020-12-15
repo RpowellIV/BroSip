@@ -36,7 +36,7 @@ const Movies = props => {
                     <RecordedReview lookup="Demon Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
                 </Col>
                 <Col>
-                    <RecordedReview lookup="Demon Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
+                    <RecordedReview lookup="Demon night" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
                 </Col>
                 <Col>
                     <RecordedReview lookup="Demon Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
