@@ -14,7 +14,7 @@ code {
 
 
 header {
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
@@ -40,11 +40,12 @@ footer {
 }
 
 a:link {
-  color: azure;
+  color:black;
 }
 
 a:visited {
   text-decoration: none;
+  color: orange;
 }
 
 .y-app {

@@ -15,6 +15,7 @@ import RecordedReview from './recordedReview'
 import DKnight from './dKnight'
 import Babadook from './babadook'
 import ThirtySix from './thirtysix'
+import BlueIguana from './blueIguana'
 
 import FeedbackForm from './testHere'
 
@@ -23,4 +24,7 @@ import FeedbackForm from './testHere'
 
 
 
-export { MainPage , Upcoming, Requests, Header, MovieDrop, MusicDrop, Movies, Music, DKnight, FeedbackForm, RecordedReview, Babadook, ThirtySix };
+export { MainPage , Upcoming, Requests, 
+        Header, MovieDrop, MusicDrop, 
+        Movies, Music, FeedbackForm, RecordedReview,
+        DKnight, Babadook, ThirtySix, BlueIguana };

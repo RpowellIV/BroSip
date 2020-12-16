@@ -1,4 +1,4 @@
-import { Container, Row, Col, Media }from 'react-bootstrap'
+import { Container, Row, Col}from 'react-bootstrap'
 import RecordedReview from './recordedReview'
 
 const Movies = props => {
@@ -21,7 +21,7 @@ const Movies = props => {
             <br></br>
             <Row>
                 <Col>
-                    <RecordedReview lookup="The 36th Chamber" linkTo="/Movies/The+36th+Chamber" poster="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_36th_Chamber_of_Shaolin.jpg/220px-The_36th_Chamber_of_Shaolin.jpg"/>
+                    <RecordedReview lookup="Blue Iguana" linkTo="/Movies/Blue+Iguana" poster="https://m.media-amazon.com/images/M/MV5BN2Y0ZmEwODAtODQzOC00ZjcwLTg5MjMtMWM3OTM0YmUzYWQ2XkEyXkFqcGdeQXVyNzM5Mjg3ODg@._V1_.jpg"/>
                 </Col>
                 <Col>
                     <RecordedReview lookup="The 36th Chamber" linkTo="/Movies/The+36th+Chamber" poster="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_36th_Chamber_of_Shaolin.jpg/220px-The_36th_Chamber_of_Shaolin.jpg"/>

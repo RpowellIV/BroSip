@@ -1,5 +1,5 @@
 import { Link, Route, Switch } from 'react-router-dom'
-import { MainPage, Upcoming, Requests, Header, Movies, DKnight, Music, FeedbackForm, Babadook, ThirtySix } from './components'
+import { MainPage, Upcoming, Requests, Header, Movies, DKnight, Music, FeedbackForm, Babadook, BlueIguana, ThirtySix } from './components'
 
 
 
@@ -20,13 +20,14 @@ const App = () => {
             <Route path='/Movies/Demon+Knight' component={DKnight} />
             <Route path='/Movies/Babadook' component={Babadook} />
             <Route path='/Movies/The+36th+Chamber' component={ThirtySix} />
+            <Route path='/Movies/Blue+Iguana' component={BlueIguana} />
             <Route exact path='/Music' component={Music} />
             <Route path='/FormTest' component={FeedbackForm} />
             </Switch>
         </main>
 
         <footer>
-            This is the footer
+            Plot details and release info provided by OMDb API
         </footer>
         </div>
     );

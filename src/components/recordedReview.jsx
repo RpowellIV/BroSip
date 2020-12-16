@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
-import { Card, Button, Media }from 'react-bootstrap'
+import { Card, Button }from 'react-bootstrap'
 import imdb from '../api/imdb'
 
 
@@ -36,7 +36,7 @@ function RecordedReview(props) {
                             <Card.Title>{recReview}</Card.Title>
                             <Card.Text>{moivePlot}</Card.Text>
                             <Card.Text>RELEASED: {movieRelease}</Card.Text>
-                            <Button variant="Secondary"><Link to={props.linkTo}>WATCH REVIEW</Link></Button>
+                            <Button variant="Secondary"><Link to={props.linkTo}>CHECKOUT OUT REVIEW</Link></Button>
                         </Card.Body>
                     </Card>
                 </div>

@@ -44,7 +44,7 @@ const Upcoming = ({ info }) => {
             <Container>
                 <Row>
                     <Col><RecReview lookup='Candyman' poster='https://posterspy.com/wp-content/uploads/2020/10/candyman-genzo-1280.jpg'/></Col>
-                    <Col><RecReview lookup='One Cut of the Dead' poster='https://lh3.googleusercontent.com/proxy/frDI3Nd5LOP0g6mrS6oOe-pncMGf5uWxpFoT0Rwrs1iZrfLPLVnvI6jlb4ueiRaztHGvIVOXHpyy_Zm1d3vXBdinBod2wPVexzlIdJ4sBUvDBPm8kA9A_floxwfhLPkceRtHEpunBp-MLZgXlKIkZw'/></Col>
+                    <Col><RecReview lookup='One Cut of the Dead' poster='https://img.reelgood.com/content/movie/31fd69ed-706d-421b-9049-18f846b7e682/poster-780.jpg'/></Col>
                     <Col><RecReview lookup='BBOY' poster='http://www.impawards.com/2013/posters/bboy_for_life.jpg'/></Col>
                 </Row>
                 <Row>
