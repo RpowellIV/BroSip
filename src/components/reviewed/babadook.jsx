@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from 'react';
-import WatchReview from './watchReview'
+import WatchReview from '../watchReview'
+
 
 
 function Babadook(props) {

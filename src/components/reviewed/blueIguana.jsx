@@ -1,5 +1,5 @@
 import React from 'react';
-import WatchReview from './watchReview'
+import WatchReview from '../watchReview'
 
 
 function BlueIguana(props) {

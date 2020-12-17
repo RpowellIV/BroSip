@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { newRequest } from '../redux/actions'
+import { newRequest } from '../../redux/actions'
 import { Container, Col, Row, Card }from 'react-bootstrap'
-import RecReview from './recorded'
+import RecReview from '../recorded'
 
 const Upcoming = ({ info }) => {
     console.log(info)

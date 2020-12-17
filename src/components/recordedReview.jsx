@@ -2,6 +2,8 @@ import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button }from 'react-bootstrap'
 import imdb from '../api/imdb'
+import ThumbsUpDown from './functions/thumbsUpDown'
+import Rating from './functions/rateIt'
 
 
 function RecordedReview(props) {
@@ -9,6 +11,8 @@ function RecordedReview(props) {
     const [recReview, setRecReview] = useState('REVIEW')
     const [movieRelease, setMovieRelease] = useState('RELEASED')
     const [moivePlot, setMoviePlot] = useState('PLOT HERE')
+    const [likeIt, setLikeIt] = useState('')
+
 
     useEffect(() => {
 
@@ -37,11 +41,19 @@ function RecordedReview(props) {
                             <Card.Text>{moivePlot}</Card.Text>
                             <Card.Text>RELEASED: {movieRelease}</Card.Text>
                             <Button variant="Secondary"><Link to={props.linkTo}>CHECKOUT OUT REVIEW</Link></Button>
+                            <Card.Text>What's your rating? 
+                                <Rating
+                                    emptySymbol={<span className="icon-text">-</span>}
+                                    fullSymbol={[1,2,3,4,5].map(n => <span className="icon-text">{n}</span>)}
+                                    />
+                            </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
             </div>
         )
     }  
+
+
 
 export default RecordedReview;

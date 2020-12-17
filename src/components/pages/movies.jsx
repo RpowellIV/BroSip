@@ -1,5 +1,5 @@
 import { Container, Row, Col}from 'react-bootstrap'
-import RecordedReview from './recordedReview'
+import RecordedReview from '../recordedReview'
 
 const Movies = props => {
 

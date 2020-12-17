@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import { Form, Button }from 'react-bootstrap'
 import {connect} from 'react-redux'
-import { newRequest } from '../redux/actions'
+import { newRequest } from '../../redux/actions'
 
 
 const Requests = props => {

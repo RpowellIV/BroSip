@@ -1,7 +1,6 @@
 import React from 'react'
-import Bros from "../media/BSATS.png"
-// import { connect } from 'react-redux'
-// import { useState } from 'react'
+import Bros from "../../media/BSATS.png"
+
 
 const MainPage = props => {
         return (
@@ -13,4 +12,4 @@ const MainPage = props => {
 
 }
 
-export default MainPage
+export default MainPage;

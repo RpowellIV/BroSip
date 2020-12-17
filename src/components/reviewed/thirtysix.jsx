@@ -1,8 +1,5 @@
-import {React, useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom'
-import { Container, Jumbotron, Row, Col, Media }from 'react-bootstrap'
-import imdb from '../api/imdb'
-import WatchReview from './watchReview'
+import React from 'react';
+import WatchReview from '../watchReview'
 
 
 function ThirtySix(props) {

@@ -13,16 +13,16 @@ const App = () => {
 
         <main>
             <Switch>
-            <Route exact path='/' component={MainPage} />
-            <Route path='/Upcoming' component={Upcoming} />
-            <Route path='/Requests' component={Requests} />
-            <Route exact path='/Movies' component={Movies} />
-            <Route path='/Movies/Demon+Knight' component={DKnight} />
-            <Route path='/Movies/Babadook' component={Babadook} />
-            <Route path='/Movies/The+36th+Chamber' component={ThirtySix} />
-            <Route path='/Movies/Blue+Iguana' component={BlueIguana} />
-            <Route exact path='/Music' component={Music} />
-            <Route path='/FormTest' component={FeedbackForm} />
+                <Route exact path='/' component={MainPage} />
+                <Route path='/Upcoming' component={Upcoming} />
+                <Route path='/Requests' component={Requests} />
+                <Route exact path='/Movies' component={Movies} />
+                <Route path='/Movies/Demon+Knight' component={DKnight} />
+                <Route path='/Movies/Babadook' component={Babadook} />
+                <Route path='/Movies/The+36th+Chamber' component={ThirtySix} />
+                <Route path='/Movies/Blue+Iguana' component={BlueIguana} />
+                <Route exact path='/Music' component={Music} />
+                <Route path='/FormTest' component={FeedbackForm} />
             </Switch>
         </main>
 

@@ -1,6 +1,6 @@
-// export const TXFR_FROM_CHECKING = 'TXFR_FROM_CHECKING';
-// export const TXFR_FROM_SAVINGS = 'TXFR_FROM_SAVINGS';
-// export const BILL_PAY = 'BILL_PAY';
-
-
 export const NEW_REQUEST = 'NEW_REQUEST';
+export const USER_RATING = 'USER_RATING';
+export const LIKED_MOVIE = 'LIKED_MOVIE';
+export const TOP_RATED = 'TOP_RATED';
+export const MOST_REQUEST = 'MOST_REQUEST';
+export const MOST_LIKED = 'MOST_LIKED';

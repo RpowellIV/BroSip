@@ -1,4 +1,4 @@
-import { NEW_REQUEST } from './actionTypes'
+import { NEW_REQUEST, USER_RATING, LIKED_MOVIE, TOP_RATED, MOST_REQUEST, MOST_LIKED } from './actionTypes'
 
 
 
@@ -10,48 +10,69 @@ export const newRequest = (email, request) => {
             info: {
                 email,
                 request,
-                date: Date.now(),
+                date: Date.now()
                 }
         }
     }
 }
 
 
+export const userRating = (rating) => {
+    return {
+        type: USER_RATING,
+        payload: {
+            userRate: {
+                rating,
+                date: Date.now()
+                }
+        }
+    }
+}
 
+export const likedMovie = (like) => {
+    return {
+        type: LIKED_MOVIE,
+        payload: {
+            liked: {
+                like,
+                date: Date.now()
+                }
+        }
+    }
+}
 
-// export const txfrFromChecking = amount => {
-//     //code that calculates new balance
-//     //dont use state.xxx us imuteability
-//     //updating state replaces entire thing
-//     return {
-//         type: TXFR_FROM_CHECKING,
-//         payload: {
-//             amount,
-//             transaction: {
-//                 amount,
-//                 date: Date.now(),
-//                 destination: 'savings',
-//                 source: 'checking'
-//                 }
-//         }
-//     }
-// }
+export const mostLiked = (likeCount) => {
+    return {
+        type: MOST_LIKED,
+        payload: {
+            likeCount
+        }
+    }
+}
+export const topRated = (ratings, average) => {
+    return {
+        type: TOP_RATED,
+        payload: {
+            totalRate: {
+                ratings,
+                average,
+                date: Date.now()
+                }
+        }
+    }
+}
 
-
-
-
-
-
-
-
-// export const txfrFromSavings = amount => {
-//     return {
-//         type: TXFR_FROM_SAVINGS,
-//         payload: {
-//             amount
-//         }
-//     }
-// }
+export const mostRequested = (reqCount) => {
+    return {
+        type: MOST_REQUEST,
+        payload: {
+            total: {
+                reqCount,
+                date: Date.now()
+                }
+        }
+    }
+}
 
 
 // export const billPay = (amount, vendor)=> dispatch => {
@@ -70,14 +91,3 @@ export const newRequest = (email, request) => {
 //     }
 // }
 
-// const recordBillPay = (amount, vendor) => {
-//     return {
-//         type: BILL_PAY,
-//         payload: {
-//             amount,
-//             date: Date.now(),
-//             destination: vendor,
-//             source: 'checking'
-//         }
-//     }
-// }
