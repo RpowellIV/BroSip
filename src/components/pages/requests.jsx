@@ -19,7 +19,7 @@ const Requests = props => {
         setEmail('');
         setRequest('');
         alert('REQUEST RECIEVED!')
-      }
+    }
 
         return (
         <div>
@@ -33,7 +33,7 @@ const Requests = props => {
                     <Form.Control onChange={handleChange} name="request" value={request} as="textarea" rows={10} />
                 </Form.Group>
                 <Button onClick={handleSubmit} variant="secondary" size="lg" block>
-                   SUBMIT REQUEST!
+                    SUBMIT REQUEST!
                 </Button>
             </Form>
         </div>

@@ -1,4 +1,4 @@
-import { LIKED_MOVIE } from '../actionTypes'
+import { LIKED_REVIEW } from '../actionTypes'
 
 
 const intialState = {
@@ -7,7 +7,7 @@ const intialState = {
 
 export default function(state = intialState, action) {
     switch(action.type) {
-        case LIKED_MOVIE: {
+        case LIKED_REVIEW: {
             return {
                 //copy initial state
                 ...state,

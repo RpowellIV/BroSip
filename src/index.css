@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  background: darkgray;
+  background: rgba(83, 6, 6, 0.979);
 }
 
 main {
@@ -27,13 +27,13 @@ main {
   flex: 1;
   justify-content: center;
   width: 100%;
-  background:rgb(59, 54, 54);
+  background:rgb(40, 37, 49);
 }
 
 
 footer {
   align-items: center;
-  background: darkgrey;
+  background: rgba(83, 6, 6, 0.979);
   padding: 30px 0;
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@ a:visited {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(59, 54, 54);
+  background-color: rgb(40, 37, 49);
 }
 
 .mainPic img {
@@ -111,7 +111,7 @@ a:visited {
 }
 
 .jumbotron {
-  background: rgb(59, 54, 54) ;
+  background: rgb(40, 37, 49);
 }
 
 .infoText {
@@ -131,7 +131,6 @@ a:visited {
   padding: 0;
   align-items: center;
   justify-content: center;
- 
 }
 
 .movReq li, .viewIt li  {
@@ -152,4 +151,35 @@ a:visited {
   justify-content: center ;
   align-items: stretch;
   
+}
+
+
+.thumbs {
+  display: inline-block;
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.like,
+.dislike {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dislike:hover,
+.like:hover {
+  color: #2EBDD1;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.active {
+  color: #2EBDD1;
+}
+
+.revText {
+  color: orange;
 }

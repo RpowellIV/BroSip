@@ -1,11 +1,40 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-const ThumbsUpDown = props => {
+class ThumbsUpDown extends React.Component {
+    
+    componentDidMount () {
+        console.log('Thumbs Up Mounted')
+    }
+
+    // state = {
+    // active: ''
+    // }
+
+
+    // $('.like, .dislike').on('click', function() {
+    //     event.preventDefault();
+    //     $('.active').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+
+
+
+    render () {
         return (
-            <div className="mainPic" >
-                THUMBS UP
+            <div className="thumbs">
+                <div className="like grow">
+                    <i className="fa fa-thumbs-up fa-3x like" aria-hidden="true" value="like"></i>
+                </div>
+
+                <div className="dislike grow">
+                    <i className="fa fa-thumbs-down fa-3x like" aria-hidden="true" value="dislike"></i>
+                </div>
             </div>
-    );
+            );
+        }
+
+
+
 
 }
 

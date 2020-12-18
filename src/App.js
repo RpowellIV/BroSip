@@ -20,13 +20,13 @@ const App = () => {
                 <Route path='/Movies/Demon+Knight' component={DKnight} />
                 <Route path='/Movies/Babadook' component={Babadook} />
                 <Route path='/Movies/The+36th+Chamber' component={ThirtySix} />
-                <Route path='/Movies/Blue+Iguana' component={BlueIguana} />
+                <Route path='/Movies/Blue+Iguana+2018' component={BlueIguana} />
                 <Route exact path='/Music' component={Music} />
                 <Route path='/FormTest' component={FeedbackForm} />
             </Switch>
         </main>
 
-        <footer>
+        <footer className="revText">
             Plot details and release info provided by OMDb API
         </footer>
         </div>
@@ -34,5 +34,4 @@ const App = () => {
     }
 
 
-      
 export default App;

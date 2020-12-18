@@ -6,12 +6,9 @@ import Music from './pages/music'
 import Upcoming from './pages/upcoming'
 import Requests from './pages/requests'
 
-import MusicDrop from './musicDrop'
-import MovieDrop from './movieDrop'
 import RecordedReview from './recordedReview' 
 
 import ThumbsUpDown from './functions/thumbsUpDown'
-import RateIt from './functions/rateIt'
 
 import DKnight from './reviewed/dKnight'
 import Babadook from './reviewed/babadook'
@@ -26,6 +23,6 @@ import FeedbackForm from './testHere'
 
 
 export { MainPage , Upcoming, Requests, 
-        Header, MovieDrop, MusicDrop, 
+        Header, 
         Movies, Music, FeedbackForm, RecordedReview,
         DKnight, Babadook, ThirtySix, BlueIguana, ThumbsUpDown };

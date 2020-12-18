@@ -1,4 +1,4 @@
-import { NEW_REQUEST, USER_RATING, LIKED_MOVIE, TOP_RATED, MOST_REQUEST, MOST_LIKED } from './actionTypes'
+import { NEW_REQUEST, USER_RATING, LIKED_REVIEW, TOP_RATED, MOST_REQUEST, MOST_LIKED } from './actionTypes'
 
 
 
@@ -17,21 +17,19 @@ export const newRequest = (email, request) => {
 }
 
 
-export const userRating = (rating) => {
+export const userRating = (rating, movie) => {
     return {
         type: USER_RATING,
         payload: {
-            userRate: {
-                rating,
-                date: Date.now()
-                }
+            rating,
+            movie
         }
     }
 }
 
-export const likedMovie = (like) => {
+export const likedReview= (like) => {
     return {
-        type: LIKED_MOVIE,
+        type: LIKED_REVIEW,
         payload: {
             liked: {
                 like,

@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import { Container, Jumbotron }from 'react-bootstrap'
 import imdb from '../api/imdb'
+import ThumbsUpDown from './functions/thumbsUpDown'
 
 
 function WatchReview(props) {
@@ -22,23 +23,28 @@ function WatchReview(props) {
                 setMovieRelease(res.data.Released)
                 setMoviePlot(res.data.Plot)
             })
-         
+    
         setCurrentMovie("NO REVIEW AVAILABLE")
-     }, [])
+        }, [])
 
         return (
-            <div className="mainPic infoText" >
+            <div className="mainPic infoText revText" >
                 <div className='apiInfo'>
                     <h1>{currentMovie}</h1>
                     <h4>{moivePlot}</h4>
                     <h6>RELEASED: {movieRelease} </h6>
                 </div>
                 <Jumbotron fluid>
-                    <Container>
+                    <Container className="mainPic">
                         <h1>BROS SIP AND TALK S#@% about...</h1>
                             <h2>{currentMovie}</h2>
                     <iframe width="590" height="332" src={props.tube} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <p>{props.blerb}</p>
+                        <br></br>
+                        <div>
+                        <p>WHAT DID YOU THINK OF THE REVIEW?</p>
+                        <ThumbsUpDown/>
+                        </div>
                     </Container>
                 </Jumbotron>
             </div>

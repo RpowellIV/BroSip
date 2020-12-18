@@ -2,7 +2,8 @@ import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button }from 'react-bootstrap'
 import imdb from '../api/imdb'
-
+import Rating from 'react-rating'
+import { userRating } from '../redux/actions'
 
 function RecReview(props) {
 
@@ -37,6 +38,9 @@ function RecReview(props) {
                         <Card.Text>{moivePlot}</Card.Text>
                         <Card.Text>RELEASED: {movieRelease}</Card.Text>
                         <Button variant="primary">See more</Button>
+                        {/* <br></br>
+                        <br></br>
+                        <Rating stop={3} onChange={(value) => props.userRating(value, recReview) }/> */}
                     </Card.Body>
                 </Card>
                 </div>
