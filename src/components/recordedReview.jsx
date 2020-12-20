@@ -36,14 +36,6 @@ const RecordedReview = props => {
         }, [])
 
 
-        // const handleChange = e => {
-        //     if (e.target.name === 'rating') setUserRate(e.target.value);
-        //     props.userRating(userRate, recReview);
-        //     alert('RATING RECIEVED!')
-        //     }
-
-
-
         return (
             <div className="mainPic infoText" >
                 <div className='apiInfo'>
@@ -57,6 +49,7 @@ const RecordedReview = props => {
                             <Card.Text>What's your rating?
                                 <br></br>
                                 <Rating stop={3} onChange={(value) => props.userRating(value, recReview) }/>
+                                <p>USER RATE: {props.newRate}</p>
                             </Card.Text>
                         </Card.Body>
                     </Card>

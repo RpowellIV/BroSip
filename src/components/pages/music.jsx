@@ -8,7 +8,6 @@ const Music = props => {
         
         <Container>
             <Row>
-               
                 <Carousel>
                 
                     <Carousel.Item>

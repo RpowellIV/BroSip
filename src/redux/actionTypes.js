@@ -4,3 +4,4 @@ export const LIKED_REVIEW = 'LIKED_REVIEW';
 export const TOP_RATED = 'TOP_RATED';
 export const MOST_REQUEST = 'MOST_REQUEST';
 export const MOST_LIKED = 'MOST_LIKED';
+export const MOVIES = 'MOVIES';

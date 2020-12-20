@@ -6,16 +6,16 @@ class ThumbsUpDown extends React.Component {
         console.log('Thumbs Up Mounted')
     }
 
-    // state = {
-    // active: ''
-    // }
+    state = {
+        likeOrDislike: ''
+    }
 
 
-    // $('.like, .dislike').on('click', function() {
-    //     event.preventDefault();
-    //     $('.active').removeClass('active');
-    //     $(this).addClass('active');
-    // });
+    // boolean
+    HandleClick = (value) => {
+        this.setState({likeOrDislike: value})
+    }
+    
 
 
 
@@ -23,11 +23,11 @@ class ThumbsUpDown extends React.Component {
         return (
             <div className="thumbs">
                 <div className="like grow">
-                    <i className="fa fa-thumbs-up fa-3x like" aria-hidden="true" value="like"></i>
+                    <i className={`fa fa-thumbs-up fa-3x like ${this.state.likeOrDislike === 'like' ?  'active': ''}`} aria-hidden="true" onClick={() => this.HandleClick('like')} value="like"></i>
                 </div>
 
                 <div className="dislike grow">
-                    <i className="fa fa-thumbs-down fa-3x like" aria-hidden="true" value="dislike"></i>
+                    <i className={`fa fa-thumbs-down fa-3x like ${this.state.likeOrDislike === 'dislike' ?  'active': ''}`} aria-hidden="true" onClick={() => this.HandleClick('dislike')} value="dislike"></i>
                 </div>
             </div>
             );

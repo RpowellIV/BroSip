@@ -1,53 +1,56 @@
-import { Container, Row, Col}from 'react-bootstrap'
+import { React, useEffect, useState } from 'react'
+import { connect } from 'react-redux'
+import { userRating } from '../../redux/actions'
+import { Container, Row, Col }from 'react-bootstrap'
 import RecordedReview from '../recordedReview'
 
-const Movies = props => {
+
+const Movies = ({ movie, rating }) => {
+
+    const [addMovie, setAddMovie] = useState('"TEST"')
+    const [newRate, setNewRate] = useState('')  
+
+    useEffect(() => {
+
+
+        const listedMovie = movie.map((movieInfo, index) => {
+        const { lookup, rating, linkTo, poster, id } = movieInfo;
+        console.log(movieInfo.rating)
+        let newRate = movieInfo.rating
+        let changeRate;
+            if(newRate > 0) {
+                changeRate = newRate
+            } else {
+                changeRate = 'Not yet rated'
+            }
+            console.log(movieInfo)
+            return (
+                <ol><RecordedReview key={id} rating={rating} lookup={lookup} linkTo={linkTo} poster={poster} newRate={newRate}/></ol>
+            )
+        });
+        setAddMovie(listedMovie)
+    
+    }, [])
+
+    
 
     return(
     <main>
         <Container>
             <br></br>
-            <Row>
-                <Col>
-                    <RecordedReview rating="-1" lookup="Demon Knight" linkTo="/Movies/Demon+Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="Babadook" linkTo="/Movies/Babadook" poster="https://64.media.tumblr.com/59bd87ac2f16c1196301bd42c88fb564/tumblr_osi48pJOSG1s80h8lo1_1280.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="The 36th Chamber" linkTo="/Movies/The+36th+Chamber" poster="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_36th_Chamber_of_Shaolin.jpg/220px-The_36th_Chamber_of_Shaolin.jpg"/>
-                </Col>
-            </Row>
-            <br></br>
-            <Row>
-                <Col>
-                    <RecordedReview lookup="Blue Iguana " linkTo="/Movies/Blue+Iguana+2018" poster="https://m.media-amazon.com/images/M/MV5BN2Y0ZmEwODAtODQzOC00ZjcwLTg5MjMtMWM3OTM0YmUzYWQ2XkEyXkFqcGdeQXVyNzM5Mjg3ODg@._V1_.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="The 36th Chamber" linkTo="/Movies/The+36th+Chamber" poster="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_36th_Chamber_of_Shaolin.jpg/220px-The_36th_Chamber_of_Shaolin.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="The 36th Chamber" linkTo="/Movies/The+36th+Chamber" poster="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_36th_Chamber_of_Shaolin.jpg/220px-The_36th_Chamber_of_Shaolin.jpg"/>
-                </Col>
-            </Row>
-            <br></br>
-            <Row>
-                <Col>
-                    <RecordedReview lookup="Demon Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="Demon night" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
-                </Col>
-                <Col>
-                    <RecordedReview lookup="Demon Knight" poster="https://64.media.tumblr.com/48f30edf22ec858957e7f30de40321fc/tumblr_pn7lwlKGHs1ssmbizo1_640.jpg"/>
-                </Col>
-            </Row>
+            <div className='movieCard'>
+                {addMovie}
+            </div>
         </Container>
     </main>
     )
 }
 
 
+const mapStatetoProps = state => ({
+    movie: state.userRating.movie,
+    rating: state.userRating.rating
+})
 
 
-export default Movies;
+export default connect(mapStatetoProps)(Movies);

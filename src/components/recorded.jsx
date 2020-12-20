@@ -19,30 +19,28 @@ function RecReview(props) {
         imdb.get(id)
             .then(res => {
                 console.log(res.data)
-                console.log(res.data.Ratings[1])
                 setRecReview(res.data.Title)
                 setMovieRelease(res.data.Released)
                 setMoviePlot(res.data.Plot)
             })
-         
         setRecReview("NO REVIEW AVAILABLE")
-     }, [])
+    }, [])
 
         return (
             <div className="mainPic infoText" >
                 <div className='apiInfo'>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={props.poster} />
-                    <Card.Body>
-                        <Card.Title>{recReview}</Card.Title>
-                        <Card.Text>{moivePlot}</Card.Text>
-                        <Card.Text>RELEASED: {movieRelease}</Card.Text>
-                        <Button variant="primary">See more</Button>
-                        {/* <br></br>
-                        <br></br>
-                        <Rating stop={3} onChange={(value) => props.userRating(value, recReview) }/> */}
-                    </Card.Body>
-                </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={props.poster} />
+                        <Card.Body>
+                            <Card.Title name="movie">{recReview}</Card.Title>
+                            <Card.Text>{moivePlot}</Card.Text>
+                            <Card.Text>RELEASED: {movieRelease}</Card.Text>
+                            <Button variant="Secondary">See more</Button>
+                            {/* <br></br>
+                            <br></br>
+                            <Rating stop={3} onChange={(value) => props.userRating(value, recReview) }/> */}
+                        </Card.Body>
+                    </Card>
                 </div>
             </div>
         )

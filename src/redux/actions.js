@@ -22,7 +22,12 @@ export const userRating = (rating, movie) => {
         type: USER_RATING,
         payload: {
             rating,
-            movie
+            movie: {
+                lookup:'',
+                rating,
+                linkTo:'',
+                poster:''
+            }
         }
     }
 }
