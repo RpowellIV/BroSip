@@ -2,7 +2,7 @@ import { USER_RATING } from '../actionTypes'
 
 
 const intialState = {
-    rating: -1,
+    rating: 0,
     movie:[
         {
             id: 1,

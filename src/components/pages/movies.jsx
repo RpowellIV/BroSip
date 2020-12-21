@@ -7,29 +7,26 @@ import RecordedReview from '../recordedReview'
 
 const Movies = ({ movie, rating }) => {
 
-    const [addMovie, setAddMovie] = useState('"TEST"')
+    const [addMovie, setAddMovie] = useState('')
     const [newRate, setNewRate] = useState('')  
 
     useEffect(() => {
 
-
         const listedMovie = movie.map((movieInfo, index) => {
         const { lookup, rating, linkTo, poster, id } = movieInfo;
         console.log(movieInfo.rating)
-        let newRate = movieInfo.rating
-        let changeRate;
-            if(newRate > 0) {
-                changeRate = newRate
+        let changeRate = movieInfo.rating
+            if(changeRate > 0) {
+                setNewRate(changeRate);
             } else {
                 changeRate = 'Not yet rated'
             }
             console.log(movieInfo)
             return (
-                <ol><RecordedReview key={id} rating={rating} lookup={lookup} linkTo={linkTo} poster={poster} newRate={newRate}/></ol>
+                <ol><RecordedReview key={id} rating={rating} lookup={lookup} linkTo={linkTo} poster={poster} newRate={changeRate}/></ol>
             )
         });
-        setAddMovie(listedMovie)
-    
+        setAddMovie(listedMovie)    
     }, [])
 
     
