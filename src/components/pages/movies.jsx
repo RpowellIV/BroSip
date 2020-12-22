@@ -5,16 +5,16 @@ import { Container, Row, Col }from 'react-bootstrap'
 import RecordedReview from '../recordedReview'
 
 
-const Movies = ({ movie, rating }) => {
+const Movies = ({ movie, rating}) => {
 
     const [addMovie, setAddMovie] = useState('') 
 
     useEffect(() => {
 
-        const listedMovie = movie.map((movieInfo, index) => {
+        const listedMovie = movie.map((movieInfo) => {
         const { lookup, rating, linkTo, poster, id } = movieInfo;
         console.log(movieInfo.rating)
- 
+
             return (
                 <ol><RecordedReview key={id} rating={rating} id={id} lookup={lookup} linkTo={linkTo} poster={poster}/></ol>
             )

@@ -18,7 +18,7 @@ function WatchReview(props) {
         imdb.get(id)
             .then(res => {
                 console.log(res.data)
-                console.log(res.data.Ratings[1])
+                // console.log(res.data.Ratings[1])
                 setCurrentMovie(res.data.Title)
                 setMovieRelease(res.data.Released)
                 setMoviePlot(res.data.Plot)

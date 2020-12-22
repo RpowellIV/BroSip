@@ -21,17 +21,18 @@ const RecordedReview = props => {
 
 
 
-    console.log(movieId)
-    console.log(userRate)
-    
+    // console.log(movieId)
+    const newRate = props.userRating()
+    const FinalRate = newRate.rating
+    console.log('new',newRate)
+    console.log('Final',FinalRate)
+    console.log('index',userRate)
 
     useEffect(() => {
 
         const id = props.lookup
         let value = props.rating
-        console.log(value)
-        console.log(id)
-    
+
         imdb.get(id)
             .then(res => {
                 console.log(res.data)
@@ -43,8 +44,8 @@ const RecordedReview = props => {
         }, [])
 
         let idNew = props.id
-        console.log(idNew)
-
+        // console.log(idNew)
+        
         return (
             <div className="mainPic infoText" >
                 <div className='apiInfo'>
@@ -58,7 +59,7 @@ const RecordedReview = props => {
                             <Card.Text>What's your rating?
                                 <br></br>
                                 <Rating stop={3} onChange={(value) => props.userRating(value, movieId) }/>
-                                <p>USER RATE: {props.rating}</p>
+                                <p>USER RATE: {userRate}</p>
                             </Card.Text>
                         </Card.Body>
                     </Card>

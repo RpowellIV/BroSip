@@ -14,6 +14,15 @@ import DKnight from './reviewed/dKnight'
 import Babadook from './reviewed/babadook'
 import ThirtySix from './reviewed/thirtysix'
 import BlueIguana from './reviewed/blueIguana'
+import Mother from './reviewed/mother'
+import Oculus from './reviewed/oculus'
+import AdamsApples from './reviewed/adamsApples'
+import BehindTheMask from './reviewed/behindTheMask'
+import PansLab from './reviewed/pansLabyrinth'
+import Baskin from './reviewed/baskin'
+import TheStrangers from './reviewed/theStrangers'
+import Ichi from './reviewed/ichiTheKiller'
+import HeLovesMe from './reviewed/heLovesMe'
 
 import FeedbackForm from './testHere'
 
@@ -25,4 +34,6 @@ import FeedbackForm from './testHere'
 export { MainPage , Upcoming, Requests, 
         Header, 
         Movies, Music, FeedbackForm, RecordedReview,
-        DKnight, Babadook, ThirtySix, BlueIguana, ThumbsUpDown };
+        DKnight, Babadook, ThirtySix, BlueIguana, 
+        Mother, AdamsApples, Oculus, BehindTheMask, 
+        PansLab, TheStrangers, Baskin, Ichi, HeLovesMe, ThumbsUpDown };
