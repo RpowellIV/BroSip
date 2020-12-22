@@ -42,8 +42,7 @@ function WatchReview(props) {
                         <p>{props.blerb}</p>
                         <br></br>
                         <div>
-                        <p>WHAT DID YOU THINK OF THE REVIEW?</p>
-                        <ThumbsUpDown/>
+                        <ThumbsUpDown movie={currentMovie}/>
                         </div>
                     </Container>
                 </Jumbotron>

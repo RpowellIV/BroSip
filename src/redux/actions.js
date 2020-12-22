@@ -17,38 +17,32 @@ export const newRequest = (email, request) => {
 }
 
 
-export const userRating = (rating, movie) => {
+export const userRating = (rating, id) => {
     return {
         type: USER_RATING,
         payload: {
-            rating,
-            movie: {
-                lookup:'',
+                id,
                 rating,
-                linkTo:'',
-                poster:''
-            }
         }
     }
 }
 
-export const likedReview= (like) => {
+export const likedReview = (liked) => {
     return {
         type: LIKED_REVIEW,
         payload: {
-            liked: {
-                like,
-                date: Date.now()
-                }
+                liked
         }
     }
 }
 
-export const mostLiked = (likeCount) => {
+export const mostLiked = (likeIt, dislikeIt, movie) => {
     return {
         type: MOST_LIKED,
         payload: {
-            likeCount
+            likeIt,
+            dislikeIt,
+            movie
         }
     }
 }

@@ -1,44 +1,78 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
+import {connect} from 'react-redux'
+import { likedReview, mostLiked } from '../../redux/actions'
 
-class ThumbsUpDown extends React.Component {
+// class ThumbsUpDown extends React.Component {
     
-    componentDidMount () {
-        console.log('Thumbs Up Mounted')
-    }
+//     componentDidMount () {
+//         console.log('Thumbs Up Mounted')
+//     }
 
-    state = {
-        likeOrDislike: ''
-    }
+//     state = {
+//         likeOrDislike: ''
+//     }
 
+//     const [addMovie, setAddMovie] = useState('') 
 
-    // boolean
-    HandleClick = (value) => {
-        this.setState({likeOrDislike: value})
-    }
+//     // boolean
+//     HandleClick = (value) => {
+//         this.setState({likeOrDislike: value})
+        
+//     }
     
 
 
 
-    render () {
+//     render () {
+
+const ThumbsUpDown = props => {
+
+    const [likeOrDislike, setlikeOrDislike] = useState('')
+    const [likeCount, setLikeCount] = useState(0)
+    const [dislikeCount, setDislikeCount] = useState(0)
+    const [currentMovie, setCurrentMovie] = useState('')
+    
+
+    const handleClick = (e, value) => {
+        e.preventDefault();
+        props.likedReview(value);
+        setlikeOrDislike(value);
+        setCurrentMovie(props.movie);
+        props.mostLiked(likeCount, dislikeCount, currentMovie)
+        if (value === 'like') setLikeCount(likeCount+1);
+        if (value === 'dislike') setDislikeCount(dislikeCount+1);
+    }
+
         return (
             <div className="thumbs">
+                <i className="fa fa-2x">WHAT DID YOU THINK OF THE REVIEW?</i><br/>
+                <i className="fa fa-2x">LIKES: {likeCount}  DISLIKES: {dislikeCount}</i>
+                <br/>
                 <div className="like grow">
-                    <i className={`fa fa-thumbs-up fa-3x like ${this.state.likeOrDislike === 'like' ?  'active': ''}`} aria-hidden="true" onClick={() => this.HandleClick('like')} value="like"></i>
+                    <i className={`fa fa-thumbs-up fa-3x like ${likeOrDislike === 'like' ?  'active': ''}`} aria-hidden="true" onClick={(e) => handleClick(e, 'like')} name="like" value="like"></i>
                 </div>
 
                 <div className="dislike grow">
-                    <i className={`fa fa-thumbs-down fa-3x like ${this.state.likeOrDislike === 'dislike' ?  'active': ''}`} aria-hidden="true" onClick={() => this.HandleClick('dislike')} value="dislike"></i>
+                    <i className={`fa fa-thumbs-down fa-3x like ${likeOrDislike === 'dislike' ?  'active': ''}`} aria-hidden="true" onClick={(e) => handleClick(e, 'dislike')} name="dislike" value="dislike"></i>
                 </div>
             </div>
             );
         }
 
 
+const mapDispatchToProps = dispatch => ({
+    likedReview: likeOrDislike => dispatch(likedReview(likeOrDislike)),
+    mostLiked: (likeCount, dislikeCount, currentMovie) => dispatch(mostLiked(likeCount, dislikeCount, currentMovie))
+})
 
+const mapStateToProps = state => ({
+    liked: state.likedReview.liked,
+    like: state.likeCount.likeIt,
+    dislike: state.likeCount.dislikeIt,
+    movie: state.likeCount.movie
+})
 
-}
-
-export default ThumbsUpDown;
+export default connect( null, mapDispatchToProps )(ThumbsUpDown);
 
 
 

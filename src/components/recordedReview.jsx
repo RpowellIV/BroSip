@@ -2,10 +2,11 @@ import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button }from 'react-bootstrap'
 import {connect} from 'react-redux'
+import { userRating } from '../redux/actions'
 import imdb from '../api/imdb'
 import ThumbsUpDown from './functions/thumbsUpDown'
 import Rating from 'react-rating'
-import { userRating } from '../redux/actions'
+
 
 
 
@@ -15,7 +16,13 @@ const RecordedReview = props => {
     const [movieRelease, setMovieRelease] = useState('RELEASED')
     const [moivePlot, setMoviePlot] = useState('PLOT HERE')
     const [likeIt, setLikeIt] = useState('')
-    const [userRate, setUserRate] = useState('-1')
+    const [userRate, setUserRate] = useState(props.rating)
+    const [movieId, setMovieId] = useState(props.id)
+
+
+
+    console.log(movieId)
+    console.log(userRate)
     
 
     useEffect(() => {
@@ -24,7 +31,7 @@ const RecordedReview = props => {
         let value = props.rating
         console.log(value)
         console.log(id)
-        
+    
         imdb.get(id)
             .then(res => {
                 console.log(res.data)
@@ -35,6 +42,8 @@ const RecordedReview = props => {
         setRecReview("NO REVIEW AVAILABLE")
         }, [])
 
+        let idNew = props.id
+        console.log(idNew)
 
         return (
             <div className="mainPic infoText" >
@@ -48,7 +57,7 @@ const RecordedReview = props => {
                             <Button variant="Secondary"><Link to={props.linkTo}>LISTEN TO OUR REVIEW</Link></Button>
                             <Card.Text>What's your rating?
                                 <br></br>
-                                <Rating stop={3} onChange={(value) => props.userRating(value, recReview) }/>
+                                <Rating stop={3} onChange={(value) => props.userRating(value, movieId) }/>
                                 <p>USER RATE: {props.rating}</p>
                             </Card.Text>
                         </Card.Body>
@@ -59,7 +68,12 @@ const RecordedReview = props => {
     }  
 
 const mapDispatchToProps = dispatch => ({
-    userRating: (userRate, recReview) => dispatch(userRating(userRate, recReview))
+    userRating: (userRate, movieId) => dispatch(userRating(userRate, movieId))
+})
+
+const mapStateToProps = state => ({
+    rating: state.userRating.rating,
+    id: state.userRating.id
 })
 
 export default connect( null, mapDispatchToProps )(RecordedReview);

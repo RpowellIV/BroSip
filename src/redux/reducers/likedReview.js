@@ -2,7 +2,7 @@ import { LIKED_REVIEW } from '../actionTypes'
 
 
 const intialState = {
-    liked: false
+    liked: '',
 };
 
 export default function(state = intialState, action) {
@@ -12,16 +12,7 @@ export default function(state = intialState, action) {
                 //copy initial state
                 ...state,
                 //change this part of state
-                liked: [
-                    //make a copy of liked
-                    ...state.liked,
-                    {
-                        //destructuring as a prop
-                        //prevents need to be explicit
-                        //spread syntax
-                        ...action.payload.liked
-                    }
-                ]
+                liked: action.payload.liked
             }
         }
         default:
