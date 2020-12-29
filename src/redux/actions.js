@@ -17,12 +17,13 @@ export const newRequest = (email, request) => {
 }
 
 
-export const userRating = (rating, id) => {
+export const userRating = (rating, id, movieIndex) => {
     return {
         type: USER_RATING,
         payload: {
                 id,
                 rating,
+                movieIndex
         }
     }
 }

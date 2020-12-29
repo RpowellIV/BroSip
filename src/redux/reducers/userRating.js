@@ -104,7 +104,7 @@ export default function(state = intialState, action) {
             return {
                 // ...state.slice(0, index),
                         ...state,
-                        index:{
+                        [index]:{
                             ...state[index],
                             rating: action.payload.rating
                         },

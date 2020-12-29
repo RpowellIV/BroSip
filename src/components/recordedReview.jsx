@@ -58,8 +58,8 @@ const RecordedReview = props => {
                             <Button variant="Secondary"><Link to={props.linkTo}>LISTEN TO OUR REVIEW</Link></Button>
                             <Card.Text>What's your rating?
                                 <br></br>
-                                <Rating stop={3} onChange={(value) => props.userRating(value, movieId) }/>
-                                <p>USER RATE: {userRate}</p>
+                                <Rating stop={3} onChange={(value) => props.userRating(value, movieId, movieIndex) }/>
+                                <p>USER RATE: {props.rating}</p>
                             </Card.Text>
                         </Card.Body>
                     </Card>
