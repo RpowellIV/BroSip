@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/BroSip/static/css/main.d1b48734.chunk.css",
+    "main.js": "/BroSip/static/js/main.cd1468cf.chunk.js",
+    "main.js.map": "/BroSip/static/js/main.cd1468cf.chunk.js.map",
+    "runtime-main.js": "/BroSip/static/js/runtime-main.47c995cd.js",
+    "runtime-main.js.map": "/BroSip/static/js/runtime-main.47c995cd.js.map",
+    "static/js/2.a8564942.chunk.js": "/BroSip/static/js/2.a8564942.chunk.js",
+    "static/js/2.a8564942.chunk.js.map": "/BroSip/static/js/2.a8564942.chunk.js.map",
+    "index.html": "/BroSip/index.html",
+    "static/css/main.d1b48734.chunk.css.map": "/BroSip/static/css/main.d1b48734.chunk.css.map",
+    "static/js/2.a8564942.chunk.js.LICENSE.txt": "/BroSip/static/js/2.a8564942.chunk.js.LICENSE.txt",
+    "static/media/BSATS.94642d70.png": "/BroSip/static/media/BSATS.94642d70.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47c995cd.js",
+    "static/js/2.a8564942.chunk.js",
+    "static/css/main.d1b48734.chunk.css",
+    "static/js/main.cd1468cf.chunk.js"
+  ]
+}
